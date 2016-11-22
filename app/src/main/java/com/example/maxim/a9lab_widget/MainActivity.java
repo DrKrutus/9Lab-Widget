@@ -1,13 +1,34 @@
-package com.example.maxim.a9lab_widget;
+package com.example.a9lab_widget;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.appwidget.AppWidgetManager;
+import android.appwidget.AppWidgetProvider;
+import android.content.Context
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppWidgetProvider {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void onEnabled(Context context) {
+        super.onEnabled(context);
+        // здесь ваш текст
     }
+
+    @Override
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager,
+                         int[] appWidgetIds) {
+        super.onUpdate(context, appWidgetManager, appWidgetIds);
+        // здесь ваш текст
+    }
+
+    @Override
+    public void onDeleted(Context context, int[] appWidgetIds) {
+        super.onDeleted(context, appWidgetIds);
+        // здесь ваш текст
+    }
+
+    @Override
+    public void onDisabled(Context context) {
+        super.onDisabled(context);
+        // здесь ваш текст
+    }
+
 }
